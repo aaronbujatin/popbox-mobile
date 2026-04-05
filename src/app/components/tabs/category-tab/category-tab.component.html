@@ -3,6 +3,30 @@
     <ion-title>Category</ion-title>
   </ion-toolbar>
 </ion-header>
+
 <ion-content>
-  <div class="example-content">Category content</div>
+  <div class="category-layout">
+
+    <!-- Left Sidebar -->
+    <div class="sidebar">
+      @for (cat of categories; track cat.id) {
+        <div class="sidebar-item"
+             [class.active]="activeCategoryId === cat.id"
+             (click)="selectCategory(cat.id)">
+          <p>{{ cat.label }}</p>
+        </div>
+      }
+    </div>
+
+    <!-- Right Content -->
+    <div class="content-panel">
+      @for (item of activeItems; track item.id) {
+        <div class="character-row">
+          <img [src]="item.image" [alt]="item.name" class="avatar">
+          <span class="character-name">{{ item.name }}</span>
+        </div>
+      }
+    </div>
+
+  </div>
 </ion-content>

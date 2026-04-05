@@ -1,7 +1,7 @@
-<swiper-container [slidesPerView]="3" [loop]="true">
+<swiper-container loop="true" pagination="true" class="mySwiper">
   @for(image of images; track image) {
-  <div class="swiper-zoom-container">
-    <swiper-slide><img [src]="image" alt=""></swiper-slide>
-  </div>
+    <swiper-slide>
+      <img [src]="image" alt="" class="img-carousel">
+    </swiper-slide>
   }
 </swiper-container>

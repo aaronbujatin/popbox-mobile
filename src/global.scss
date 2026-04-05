@@ -24,7 +24,6 @@
 @import "@ionic/angular/css/text-alignment.css";
 @import "@ionic/angular/css/text-transformation.css";
 @import "@ionic/angular/css/flex-utils.css";
-
 /**
  * Ionic Dark Mode
  * -----------------------------------------------------
@@ -41,4 +40,13 @@
   align-items: center;
   justify-content: center;
   height: 100%;
+}
+
+swiper-container {
+  --swiper-navigation-size: 0px;  // hides nav arrows if not needed
+}
+
+ion-tab-button {
+  --color: #888;           /* inactive tab color */
+  --color-selected: #1d1d1f; /* active tab color */
 }

@@ -1,0 +1,62 @@
+<!-- <div class="product-card">
+  <div class="image-wrapper">
+    <img [src]="product.imageUrl" [alt]="product.name" class="product-image" />
+
+    <div class="badges">
+      @if (product.isOutOfStock) {
+        <span class="badge out-of-stock">OUT OF STOCK</span>
+      }
+      @if (product.isNew) {
+        <span class="badge new">NEW</span>
+      }
+      @if (product.badge) {
+        <span class="badge special">{{ product.badge }}</span>
+      }
+    </div>
+  </div>
+
+  <div class="product-info">
+    <p class="product-name">{{ product.name }}</p>
+    <p class="product-price">₱{{ product.price | number: "1.2-2" }}</p>
+  </div>
+</div> -->
+
+<div>
+  <h1>Recommended for you</h1>
+  <ion-grid class="product-grid">
+    <ion-row>
+      @for (product of products; track product.id) {
+        <ion-col size="6">
+          <div class="product-card">
+            <div class="image-wrapper">
+              <img
+                [src]="product.imageUrl"
+                [alt]="product.name"
+                class="product-image"
+              />
+
+              <div class="badges">
+                @if (product.isOutOfStock) {
+                  <span class="badge out-of-stock">OUT OF STOCK</span>
+                }
+                @if (product.isNew) {
+                  <span class="badge new">NEW</span>
+                }
+                @if (product.badge) {
+                  <span class="badge special">{{ product.badge }}</span>
+                }
+              </div>
+            </div>
+
+            <div class="product-info">
+              <p class="product-name">{{ product.name }}</p>
+              <p class="product-price">
+                ₱{{ product.price | number: "1.2-2" }}
+              </p>
+            </div>
+          </div>
+        </ion-col>
+      }
+    </ion-row>
+  </ion-grid>
+</div>
