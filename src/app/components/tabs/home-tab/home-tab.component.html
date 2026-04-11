@@ -1,13 +1,52 @@
-<ion-header>
+<ion-header class="ion-no-border">
   <ion-toolbar>
-    <ion-title>Home</ion-title>
+    <div class="toolbar-content">
+      <!-- Hamburger left (hidden, for balance) -->
+      <!-- <button class="icon-btn" (click)="openMenu()">
+        <ion-icon name="bag-outline"></ion-icon>
+      </button> -->
+
+      <!-- POP MART Logo center -->
+      <div class="logo-box">
+        <span class="logo-text">POP MART</span>
+      </div>
+
+      <!-- Right icons -->
+      <div class="right-icons">
+        <button class="icon-btn" (click)="openCart()">
+          <ion-icon name="bag-outline"></ion-icon>
+        </button>
+        <button class="icon-btn" (click)="openMenu()">
+          <ion-icon name="menu-outline"></ion-icon>
+        </button>
+      </div>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="search-wrapper">
+      <div class="search-bar">
+        <ion-icon name="search-outline" class="search-icon"></ion-icon>
+        <input
+          type="text"
+          class="search-input"
+          placeholder="SKULLPANDA"
+          [(ngModel)]="searchQuery"
+        />
+      </div>
+    </div>
   </ion-toolbar>
 </ion-header>
 <ion-content>
-
   <app-carousel [images]="images"></app-carousel>
 
   <app-product-recommend [products]="products"></app-product-recommend>
+  <!-- <ion-button id="open-toast">Open Toast</ion-button>
+  <ion-toast
+    trigger="open-toast"
+    message="Successfully added to cart!"
+    [duration]="3000"
+    icon="bag-check-outline"
+  ></ion-toast> -->
 
   <div class="example-content">Listen now contents</div>
 </ion-content>

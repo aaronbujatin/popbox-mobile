@@ -33,7 +33,7 @@
 
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
-@import '@ionic/angular/css/palettes/dark.system.css';
+@import "@ionic/angular/css/palettes/dark.system.css";
 
 .example-content {
   display: flex;
@@ -43,10 +43,33 @@
 }
 
 swiper-container {
-  --swiper-navigation-size: 0px;  // hides nav arrows if not needed
+  --swiper-navigation-size: 0px; // hides nav arrows if not needed
 }
 
 ion-tab-button {
-  --color: #888;           /* inactive tab color */
+  --color: #888; /* inactive tab color */
   --color-selected: #1d1d1f; /* active tab color */
+}
+
+ion-content {
+  /* Set width and track styling */
+  &::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+  }
+
+  /* Set scrollbar thumb styling */
+  &::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 10px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+  }
 }

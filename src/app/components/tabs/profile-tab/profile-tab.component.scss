@@ -1,0 +1,222 @@
+.me-page {
+  --background: #f2f2f2;
+}
+
+// Member Header
+.member-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  padding: 20px 16px 16px;
+
+  .member-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+
+    .member-avatar {
+      width: 52px;
+      height: 52px;
+    }
+
+    .member-text {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+
+      ion-icon {
+        font-size: 18px;
+        color: #555;
+      }
+    }
+  }
+
+  .member-card-btn {
+    --border-radius: 20px;
+    --border-color: #ccc;
+    --color: #333;
+    font-size: 12px;
+    height: 34px;
+  }
+}
+
+// Points & Rewards Card
+.points-rewards-card {
+  display: flex;
+  background: #fff;
+  margin: 2px 0;
+  padding: 16px;
+  align-items: center;
+
+  .points-section {
+    flex: 1;
+    cursor: pointer;
+
+    .points-label {
+      font-size: 13px;
+      color: #888;
+      margin: 0 0 4px;
+    }
+
+    .points-value {
+      font-size: 22px;
+      font-weight: 600;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+
+      ion-icon { font-size: 16px; color: #888; }
+    }
+  }
+
+  .divider-v {
+    width: 1px;
+    height: 40px;
+    background: #eee;
+    margin: 0 16px;
+  }
+
+  .rewards-section {
+    flex: 1;
+    cursor: pointer;
+
+    .more-benefits {
+      font-size: 11px;
+      color: #888;
+      letter-spacing: 1px;
+      margin: 0 0 4px;
+    }
+
+    .rewards-label {
+      font-size: 15px;
+      font-weight: 700;
+      margin: 0;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      letter-spacing: 0.3px;
+
+      ion-icon { font-size: 14px; }
+    }
+  }
+}
+
+// Section Cards
+.section-card {
+  background: #fff;
+  margin: 8px 0;
+  padding: 16px;
+
+  .section-title {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #111;
+    margin: 0 0 16px;
+  }
+}
+
+// Icon Grid (Orders & Quick Links)
+.icon-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+
+  .icon-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+
+    ion-icon {
+      font-size: 28px;
+      color: #333;
+    }
+
+    span {
+      font-size: 12px;
+      color: #444;
+      text-align: center;
+      line-height: 1.3;
+    }
+  }
+}
+
+// Assets Grid
+.assets-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  text-align: center;
+  gap: 8px;
+
+  .asset-item {
+    cursor: pointer;
+
+    .asset-value {
+      display: block;
+      font-size: 24px;
+      font-weight: 700;
+      color: #111;
+    }
+
+    .asset-label {
+      display: block;
+      font-size: 11px;
+      color: #888;
+      letter-spacing: 0.5px;
+      margin-top: 4px;
+    }
+  }
+}
+
+.links-card {
+  .icon-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+// Version
+.version-text {
+  text-align: center;
+  font-size: 12px;
+  color: #aaa;
+  padding: 16px 0 24px;
+}
+
+// Draw Tab Special Style
+.draw-tab {
+  .draw-circle {
+    background: #e8001c;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2px;
+    margin-top: -16px;
+    box-shadow: 0 4px 12px rgba(232, 0, 28, 0.4);
+
+    ion-icon {
+      color: #fff;
+      font-size: 22px;
+    }
+  }
+}
+
+ion-tab-bar {
+  --background: #fff;
+  border-top: 1px solid #eee;
+
+  ion-tab-button {
+    --color: #999;
+    --color-selected: #111;
+  }
+}

@@ -8,19 +8,31 @@ export const routes: Routes = [
     children: [
       {
         path: 'home',
-        loadComponent: () => import('./components/tabs/home-tab/home-tab.component').then((m) => m.HomeTabComponent),
+        loadComponent: () =>
+          import('./components/tabs/home-tab/home-tab.component').then(
+            (m) => m.HomeTabComponent,
+          ),
       },
       {
         path: 'category',
-        loadComponent: () => import('./components/tabs/category-tab/category-tab.component').then((m) => m.CategoryTabComponent),
+        loadComponent: () =>
+          import('./components/tabs/category-tab/category-tab.component').then(
+            (m) => m.CategoryTabComponent,
+          ),
       },
       {
         path: 'cart',
-        loadComponent: () => import('./components/tabs/cart-tab/cart-tab.component').then((m) => m.CartTabComponent),
+        loadComponent: () =>
+          import('./components/tabs/cart-tab/cart-tab.component').then(
+            (m) => m.CartTabComponent,
+          ),
       },
       {
         path: 'profile',
-        loadComponent: () => import('./components/tabs/profile-tab/profile-tab.component').then((m) => m.ProfileTabComponent),
+        loadComponent: () =>
+          import('./components/tabs/profile-tab/profile-tab.component').then(
+            (m) => m.ProfileTabComponent,
+          ),
       },
       {
         path: '',
@@ -33,5 +45,12 @@ export const routes: Routes = [
     path: '',
     redirectTo: '/example/home',
     pathMatch: 'full',
+  },
+  {
+    path: 'products/:id',
+    loadComponent: () =>
+      import('./components/product-view/product-view.component').then(
+        (m) => m.ProductViewComponent,
+      ),
   },
 ];

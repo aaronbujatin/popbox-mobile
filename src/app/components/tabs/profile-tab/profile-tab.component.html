@@ -1,8 +1,69 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>Profile</ion-title>
-  </ion-toolbar>
-</ion-header>
-<ion-content>
-  <div class="example-content">Profile content</div>
+<ion-content [fullscreen]="true" class="me-page">
+
+  <!-- Member Header -->
+  <div class="member-header">
+    <div class="member-info" (click)="goToProfile()">
+      <ion-avatar class="member-avatar">
+        <img src="https://i.pinimg.com/originals/63/e0/75/63e075fb01508ca5d51582a12deadb5f.jpg" alt="avatar" />
+      </ion-avatar>
+      <div class="member-text">
+        <span class="member-label">POPMART MEMBER</span>
+        <ion-icon name="chevron-forward-outline"></ion-icon>
+      </div>
+    </div>
+
+    <ion-button fill="outline" color="dark" class="member-card-btn" (click)="openMemberCard()">
+      <ion-icon name="barcode-outline" slot="start"></ion-icon>
+      Member Card
+    </ion-button>
+  </div>
+
+  <!-- Points & Rewards -->
+  <div class="points-rewards-card">
+    <div class="points-section" (click)="goToPoints()">
+      <p class="points-label">My Points</p>
+      <p class="points-value">0 <ion-icon name="chevron-forward-outline"></ion-icon></p>
+    </div>
+    <div class="divider-v"></div>
+    <div class="rewards-section" (click)="goToRewards()">
+      <p class="more-benefits">MORE BENEFITS</p>
+      <p class="rewards-label">MEMBER REWARDS <ion-icon name="chevron-forward-outline"></ion-icon></p>
+    </div>
+  </div>
+
+  <!-- My Order -->
+  <div class="section-card">
+    <p class="section-title">MY ORDER</p>
+    <div class="icon-grid">
+      <div class="icon-item" *ngFor="let order of orderItems" (click)="goToOrder(order.key)">
+        <ion-icon [name]="order.icon"></ion-icon>
+        <span>{{ order.label }}</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- My Assets -->
+  <div class="section-card">
+    <p class="section-title">MY ASSETS</p>
+    <div class="assets-grid">
+      <div class="asset-item" *ngFor="let asset of assets" (click)="goToAsset(asset.key)">
+        <span class="asset-value">{{ asset.value }}</span>
+        <span class="asset-label">{{ asset.label }}</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Quick Links -->
+  <div class="section-card links-card">
+    <div class="icon-grid">
+      <div class="icon-item" *ngFor="let link of quickLinks" (click)="goToLink(link.key)">
+        <ion-icon [name]="link.icon"></ion-icon>
+        <span>{{ link.label }}</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Version -->
+  <p class="version-text">Version 4.6.3</p>
+
 </ion-content>
